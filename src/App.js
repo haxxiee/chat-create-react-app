@@ -57,7 +57,7 @@ function App() {
 
     if (currentRoom) socket.emit("join_room", currentRoom);
     socket.emit("get_messages", currentRoom);
-  }, [currentRoom]);
+  });
 
   const handleClickCreate = () => {
     socket.emit("create_room", addRoom);
